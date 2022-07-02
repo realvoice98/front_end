@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+<body>
+  
+  <div id = "alert" class="alert-box">
+    <p id="tilte">Alert Box</p> 
+    <button id="close">닫기</button>
+  </div>
+  <br>
+  <button  onclick=" 로그인('block')">아이디</button>
+  <button  onclick=" 비밀번호('block')">비밀번호</button>
+  
+  
+  <!-- 1. 제목변경 2. 박스하나더 생성 -->
+  <script>
+    document.getElementById("close").addEventListener("click",function(){
+      document.getElementById("alert").style.display="none";
+    })
+
+    function 로그인(구멍){
+      document.getElementById('alert').style.display = 구멍;
+      document.getElementById('tilte').innerHTML = "아이디를 입력하세요";
+
+    }
+
+    function 비밀번호(구멍){
+      document.getElementById('alert').style.display = 구멍;
+      document.getElementById('tilte').innerHTML = "비밀번호를 입력하세요";
+    }
+    
+  </script>
+</body> 
+</html>
