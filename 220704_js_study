@@ -1,0 +1,113 @@
+var는 block scope를 무시한다.
+
+Constant는 상수.
+값을 받고나면 다시는 변경불가 
+Immutable 데이터이다.
+
+  - 보안상 
+- 실수를 줄일 수 있다.
+
+Variable types 
+
+Primitive - 더이상 나눌 수 없는 작은 한가지의 다위
+Object - 싱글아이템을 하나
+
+자바스크립트는 number면 숫자형 데이터타입만 있으면 됨.
+
+Infinity
+-infinity
+NaN
+
+bigInt = 숫자 끝에 n을 붙히면 됨.
+
+Symbol
+
+5. Dynamic typing.
+
+ Immutable data types : primitive types _데이터 변경 불가.
+Mutable data : all object (array)
+
+
+자바스크립트에서는 펑션이 오브젝트임
+
+Rest parameter
+… 
+
+
+Local scope
+
+밖에서는 안이 보이지 않고
+안에서만 밖을 볼 수 있다
+
+Return a value
+Return 을 따로 지정해주지 않으면 Default값으로 undefined이 들어간 것으로 알면됨.
+
+Early retrun , early exit 
+— 값이 맞지 않을경우 빨리 리턴을하는것이 좋다.
+
+Function expression 
+
+
+Callback hell 
+Function randomquiz(answer,printYes,printNo){
+	if ( answer === ‘love you’) {
+		printYes();
+}	else{
+	printNo();
+}
+}
+
+Const printYes = function() {
+	console.log(‘yes!’);
+}
+
+Const printNo = function print() {
+	console.log(’no!’);
+}
+
+randomquiz(‘wrong’, printYes, printNo);
+randomquiz(‘love you’, printYes, printNo);
+
+함수안에서 자신 함수 스스로를 부르는것을 리퀄젼 — 프로그램이 죽으니까 사용 x
+
+
+
+Arrow funtion
+Const test = () => console.log(‘simplePrint!!’);
+Const test = function(){
+	console.log(‘simplePrint!!’)
+}
+
+{}를 쓰게되면 return 값을 넣어줘야함..
+
+
+IIFE : Immediately Invoked Function Expression
+
+(Function Hello() {
+	console.log(‘hello world!’);
+})(); 
+
+Class는 연관있는 속성과 메소드를 묶어놓은것.
+
+Es6	이후로 클래스가 생김 !!
+
+Object = {키 : 밸류};
+
+Computed properties
+Key should be always string
+console.log(ellies.name);
+console.log(ellies[‘name’]);
+
+Function printValue(obj, key) {
+	console.log(obj[key]);
+}
+printValue(Ellie, ‘name’);
+
+Array
+Foreach 는 인자로 (elements,index,array)를 나타낼 수 있으며, index와 array는 생략가능.
+arr.Foreach()의 구문을 사용
+특정조건을 걸어 멈추거나 할 수없음. 리턴으로 반환할 수 없어 따로 배열을 생성해서 안에 값을 넣어줘야함(필요시)
+
+Callback 함수
+정의 함수에 파라미터로 들어가는 함수
+용도 순차적으로 실행하고 싶을때 씀
